@@ -119,7 +119,7 @@ void loop() {
   //temperature sensor: if the temperature is over 30, it will turn into rainbow,or else normal
   tempC = CircuitPlayground.temperature();
 
-  if (tempC > 30) {
+  if (tempC > 37.5 ) {
     rainbow(20);
   } else {
     float acc = abs(CircuitPlayground.motionX()) + abs(CircuitPlayground.motionY()) + abs(CircuitPlayground.motionZ());
@@ -133,11 +133,7 @@ void loop() {
     }
     strip.show();
   }
-
-
 }
-
-
 
 void rainbow(uint8_t wait) {
   uint16_t i, j;
