@@ -59,7 +59,7 @@ void loop() {
       CircuitPlayground.clearPixels();
     }
   } else if (value > 60) {
-    theaterChase(strip.Color(22, 97, 171), 200); // Blue
+    theaterChase(strip.Color(22, 97, 195), 200); // Blue
    
     //  Pause for a moment
     //delay(300);
@@ -75,29 +75,29 @@ void loop() {
   // delay(100);
 
   //slouch
-  currentAngle = RAD2DEG * asin(-CircuitPlayground.motionZ() / GRAVITY);
+  //currentAngle = RAD2DEG * asin(-CircuitPlayground.motionZ() / GRAVITY);
 
-  if ( ( CircuitPlayground.leftButton()) || ( CircuitPlayground.rightButton())) {
+ // if ( ( CircuitPlayground.leftButton()) || ( CircuitPlayground.rightButton())) {
     // if either is pressed
-    targetAngle = currentAngle;
-  }
+  //  targetAngle = currentAngle;
+  //}
 
-  if (currentAngle - targetAngle > SLOUCH_ANGLE) {
-    if (!slouching) {
-      strip.show();
-      slouchStartTime = millis();
-      slouching = true;
-    }
-  }
-  else {
-    slouching = false;
-  }
+ // if (currentAngle - targetAngle > SLOUCH_ANGLE) {
+  //  if (!slouching) {
+  //    strip.show();
+   //   slouchStartTime = millis();
+  //    slouching = true;
+  //  }
+ // }
+  //else {
+  //  slouching = false;
+  //}
 
-  if (slouching) {
-    strip.show();
-    rainbow(20);
-  }
-  delay(10);
+  //if (slouching) {
+  //  strip.show();
+  //  rainbow(20);
+  //}
+  //delay(10);
 }
 
 //Theatre-style crawling lights.
