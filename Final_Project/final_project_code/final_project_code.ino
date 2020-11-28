@@ -59,7 +59,8 @@ void loop() {
       CircuitPlayground.clearPixels();
     }
   } else if (value > 60) {
-    theaterChase(strip.Color(255, 0, 0), 200); // White
+    theaterChase(strip.Color(22, 97, 171), 200); // Blue
+   
     //  Pause for a moment
     //delay(300);
     strip.show();
@@ -68,7 +69,7 @@ void loop() {
       CircuitPlayground.clearPixels();
     }
     else {
-      theaterChase(strip.Color(0, 0, 127), 200); // Blue
+       theaterChase(strip.Color(240, 55, 82), 200); // pink
     }
   }
   // delay(100);
